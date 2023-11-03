@@ -1,38 +1,117 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600&family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: rgb(35, 30, 36);
+  color: white;
+  padding: 6px;
   text-align: center;
+  font-family: 'Roberto', sans-serif;
+  font-weight: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url('./Components/bg.jpg');
+  background-size: cover; /* This property ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image both horizontally and vertically */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
+.container {
+  width: 50%;
+  margin: auto;
   min-height: 100vh;
+  padding: 4vmax 8vmax;
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid rgba(221, 211, 205, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.container form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.container h1 {
+  text-align: center; /* Center text horizontally */
   color: white;
+  margin: 30px auto; /* Center text vertically and add auto for horizontal margin */
+  font-size: 2.5rem;
+  font-weight: 200;
+  width: 100%;
+  max-width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0, 0.214);
+  border-radius: 5px;
+  margin: 2px auto;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 300px;
+  font-weight: 300;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+form button{
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid rgba(177, 164, 164, 0.214);
+  border-radius: 5px;
+  background-color: rgb(15, 14, 14, 0.9);
+  color: white; 
+  font-size: 1.2rem;
+  margin: 5px auto;
+  width: auto;
+  max-width: 400px;
+
+}
+
+.task {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.task div {
+  width: 100%;
+}
+
+.task span {
+  color: rgba(0, 0, 0, 0.566);
+
+}
+
+.task button {
+  border-radius: 25%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.6rem;
+  background-color: crimson;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.task button:hover {
+  background-color: brown;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%; /* Adjust container width for smaller screens */
   }
 }
